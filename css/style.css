@@ -1,0 +1,415 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+address {
+	font-style: normal;
+	margin-top: 20px;
+}
+body {
+	color: #000;
+	background: #fff;
+	margin-top:-15px;
+	font: 18px/1.6 'Poppins', sans-serif;
+	min-width: 320px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ 
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+.clearfix {
+	height: 0pt;
+	clear: both;
+}
+p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	line-height:20px;
+}
+[class^="icon-"], [class*=" icon-"] {
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+/* (1) DEFINE COMMON HEADER PROPERTIES FIRST AND THEN FONT SIZW SEPERATELY FOR EACH */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* font-family: "Poppins", sans-serif; */
+	font-family: 'Poppins', sans-serif;
+
+	margin: 0 0 10px;
+}
+h1 {
+	font-size: 46px;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	font-size: 22px;
+}
+h4 {
+	font-size: 18px;
+}
+h5 {
+	font-size: 17px;
+}
+h6 {
+	font-size: 19px;
+}
+@media all and (max-width:767px) {
+	h1, .slider h1 {
+		font-size:100%!important;
+	}
+}
+p {
+	margin: 0 0 20px;
+}
+a {
+	-webkit-transition: 0.5s ease-in all;
+	-moz-transition: 0.5s ease-in all;
+	transition: 0.5s ease-in all;
+	color: #000;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #ff214f;
+}
+
+.section a {
+	text-decoration:underline;
+}
+/* lists */
+ul, ol {
+	margin:20px 0;
+}
+ol  {
+	list-style:decimal;
+}
+ul  {
+	list-style:disc;
+
+}
+
+ul li,
+ol li {
+	margin:0 0 5px;
+	padding:0 0 2px;
+	font-size:16px;
+	line-height:20px;
+}
+/* definition lists */
+dl {
+    border: 3px double #ccc;
+    padding: 0.5em;
+}
+dt {
+	float: left;
+	clear: left;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+	color: red;
+}
+dt::after {
+	content: ":";
+}
+dd {
+	margin: 0 0 0 110px;
+	padding: 0 0 0.5em 0;
+}
+/* tables , forms */
+table,tr,td,tdoby,th {
+	border-collapse:collapse;
+}
+form,legend,input,select,textarea {
+}
+
+/*
+---------------
+floats & blocks
+---------------
+*/
+
+.float-left {
+	float:left;
+}
+.float-right {
+	float:right;
+}
+.inline {
+	display:inline;
+}
+.inline-block {
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:100%;
+	*display:inline;
+}
+.block {
+	display:block;
+}
+/*
+----------------------
+alignments and flexbox
+----------------------
+*/
+ .align-left {
+     text-align: left;
+}
+ .align-right {
+     text-align: right;
+}
+ .align-center {
+     text-align: center;
+}
+ .marginauto {
+     margin: 0 auto!important;
+}
+ .valign-top {
+     vertical-align: top!important;
+}
+ .valign-middle, .valign-middle-children > * {
+     vertical-align: middle!important;
+}
+ .valign-bottom {
+     vertical-align: bottom!important;
+}
+ .fullwidth {
+     width: 100%;
+}
+ .fullheight {
+     height: 100%;
+}
+
+  
+/* Row with equal height columns -------------------------------------------------- */
+
+.vertical-align-all {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: center;
+         -webkit-justify-content: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
+    }
+
+ @media (min-width: 768px) {
+     .vertical-align-no-xs {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: center;
+         -webkit-justify-content: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
+    }
+}
+ @media (max-width: 991px) {
+     .vertical-align-no-md {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: center;
+         -webkit-justify-content: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
+    }
+}
+ @media (min-width: 992px) {
+     .vertical-align-no-sm {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+         -webkit-align-items: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: center;
+         -webkit-justify-content: center;
+         -ms-flex-pack: center;
+         justify-content: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+         -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
+    }
+     .row-eq-height-no-sm {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+    }
+}
+ @media (min-width: 1200px) {
+     .row-eq-height, .row-eq-height-no-md {
+         display: -webkit-box;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: flex;
+    }
+}
+@media(min-width:768px){ 
+	
+	.vertical-align-no-xs{ 
+		margin: 0 auto; /* IE9 */
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+			-webkit-align-items: center;
+				-ms-flex-align: center;
+					align-items: center;
+		-webkit-box-pack: center;
+			-webkit-justify-content: center;
+				-ms-flex-pack: center;
+					justify-content: center;
+		-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+				-webkit-flex-direction: row;
+					-ms-flex-direction: row;
+						flex-direction: row;
+	}
+} 
+@media(min-width:992px){
+	.vertical-align-no-sm{ /* NO IE9 */
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+			-webkit-align-items: center;
+				-ms-flex-align: center;
+					align-items: center;
+		-webkit-box-pack: center;
+			-webkit-justify-content: center;
+				-ms-flex-pack: center;
+					justify-content: center;
+		-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+				-webkit-flex-direction: row;
+					-ms-flex-direction: row;
+						flex-direction: row;
+	}
+}
+.only-vertical-align{ /* NO IE9 */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+		-webkit-align-items: center;
+			-ms-flex-align: center;
+				align-items: center;
+}
+/*
+----------------
+responsive video
+----------------
+*/
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,
+.Flexible-container video, /* for html5 video embeds */
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+	
